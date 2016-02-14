@@ -1,4 +1,4 @@
-// References: stackoverflow.com
+// References: stackoverflow.com - w3schools.com
 
 "use strict";
 
@@ -30,7 +30,9 @@ function numToWords (number) {
 	
 	chunksLen = chunks.length;
 	words = [];
-    for( i = 0; i < chunksLen; i++ ) {
+	
+	// Assigns the corresponding word/s to each chunk
+		for( i = 0; i < chunksLen; i++ ) {
 
         chunk = parseInt(chunks[i]);
 
@@ -71,8 +73,29 @@ function numToWords (number) {
     return words.reverse().join(' ');
 
 }
+function wordsToNum () {
+	
+}
 
 function wordstoCurrency (number) {
 	
+	var str = number.split(",") // Splits the user input into the number itself and the currency
+	number = str[0];
+	var curr = str[1];
+	
+	if (curr == USD) {
+		words.unshift("USD");
+	}
+	else if (curr == JPY) {
+		words.unshift("JPY");
+	}
+	else if (curr == PHP) {
+		words.unshift("PHP");
+	}
+	
+	
+}
+
+function numberDelimited () {
 	
 }
